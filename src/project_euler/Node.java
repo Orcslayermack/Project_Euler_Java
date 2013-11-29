@@ -1,13 +1,14 @@
 package project_euler;
 
 public class Node {
+	// Node Data
 	private int number;
-	Node next = null;
+	protected Node next;
 	
 	// Constructors
 	Node (int number) {
 		setNumber(number);
-		
+		setNext(null);
 	}
 	
 	// Getters and Setters

@@ -6,15 +6,19 @@
 package project_euler;
 
 public class Problem03 {
-	int testInt = 0;
+	static int testInt = 0;
 
 	public static void main(String[] args) {
-
+		NumberList numberList = factor(testInt);
+		
+	/*	while () {
+			
+		}*/
 		//int[] testArray = {1,2,3,4,24,78,203,49,302,59,3};
-		//System.out.println("the largest int is " + largestInt(testArray));
+		//System.out.println("the largest integer is " + largestInt(testArray));
 
 		//primeFactors = primeFactors(testint);
-		//.out.println("The largest prime factor of " + testint + " is: " + largestInt(primeFactors(testInt)));
+		//.out.println("The largest prime factor of " + testInt + " is: " + largestInt(primeFactors(testInt)));
 
 	}
 	/**
@@ -36,38 +40,30 @@ public class Problem03 {
 	 * @param a 
 	 * @return NumberList
 	 */
-	public static NumberList factors(int a) {
-		NumberList listOfFactors = new NumberList(0);
+	public static NumberList factor(int a) {
+		NumberList listOfFactors = new NumberList(1);
+		
 		if (isPrime(a) == true) {
+			//TODO figure out what happens if the given parameter is prime.
 			return null;
 		}
 		else {
-		    for (int i = 1; i < a; i++) {
+		    for (int i = 2; i < a; i++) {
 		    	if ( a%i == 0 ) {
 		    		Node node = new Node(i);
-		    		listOfFactors.addNode();
+		    		listOfFactors.addNode(node);
 		    	}
 		    }
-		    listOfFactors.
 			return listOfFactors;
 		}
 	}
-
+	
 	/*
 	 * 
 	 * @param a integer array
 	 * @return the largest integer in the array
 	 */
-	public static int largestInt(int[] a) {
-		int largest = a[0];
-		for (int i = 1; i < a.length; i++) {
-			if (a[i] > largest) {
-				largest = a[i];
-			}
-		}
-		return largest;
-	}
+	
 
-	/*public static int largestInt() {
-	}*/
+
 }
