@@ -2,11 +2,11 @@ package project_euler;
 
 public class Node {
 	// Node Data
-	private int number;
+	private long number;
 	protected Node next;
 	
 	// Constructors
-	Node (int number) {
+	Node (long number) {
 		setNumber(number);
 		setNext(null);
 	}
@@ -18,10 +18,10 @@ public class Node {
 	public void setNext(Node node) {
 		next = node;
 	}
-	public int getNumber() {
+	public long getNumber() {
 		return number;
 	}
-	public void setNumber(int number) {
+	public void setNumber(long number) {
 		this.number = number;
 	}
 	public void printNumber(){

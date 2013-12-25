@@ -6,7 +6,7 @@ public class NumberList {
 	protected Node current = null;
 
 	// Constructors
-	NumberList (int number) {
+	NumberList (long number) {
 		first = new Node(number);
 		first();
 	}
@@ -121,13 +121,13 @@ public class NumberList {
 	/**
 	 * 
 	 * @param numList
-	 * @return largest int contained in the num list.
+	 * @return largest long contained in the num list.
 	 */
-	public int largestInt(NumberList numList) {
-		int largest = 0;
+	public long largestInt(NumberList numList) {
+		long largest = 0;
 		if ( isEmpty() == true ) {
 			//TODO see if these returns are really needed
-			//return 0;
+			return 0;
 		}
 		else {
 			first();
@@ -138,7 +138,6 @@ public class NumberList {
 				}
 				next();
 			}
-			//return largest;
 		}
 		return largest;
 	}
@@ -155,6 +154,4 @@ public class NumberList {
 			return false;
 		}
 	}
-
-
 }
